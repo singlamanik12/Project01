@@ -5,7 +5,10 @@
   // CREATE YOUR CONNECTION BELOW THE LINE
 
 //$conn = mysqli_connect(' comp-1006.cq2sofwg3vlf.us-east-1.rds.amazonaws.com','user_200441085','5e3658728fcec', 'db_200441085');
-$conn = mysqli_connect('localhost','root','','lesson_03'); 
+//$conn = mysqli_connect('localhost','root','','lesson_03'); 
+include('./.env.php');
+$conn = mysqli_connect(getenv('DB_HOST'), getenv('DB_USER'), getenv('DB_PASS'), getenv('DB'));
+
 // TOTAL POINTS POSSIBLE: 6
 
 ?>
